@@ -33,9 +33,9 @@ PORT=8080 npm start
 ## Architecture
 
 - `server.js` — dependency-free Node static server and narrow read-only API proxy
-- `public/index.html` — accessible semantic application shell
-- `public/styles.css` — responsive original visual system
-- `public/app.js` — live data rendering and transparent scoring engine
+- `index.html` — accessible semantic application shell
+- `styles.css` — responsive original visual system
+- `app.js` — live data rendering and transparent scoring engine
 
 The server only exposes curated read routes and never requests wallet permissions. Data source:
 
@@ -63,9 +63,12 @@ The current prototype derives granular checks from these families and exposes ea
 4. Add the token address below and link the app from its metadata.
 5. Submit the demo, repository and token in the official builders Discord.
 
-**Token address:** `TBD`  
-**Live app:** `TBD`  
-**Builder wallet:** `TBD`
+**Token:** [$VLENS on vibe/vibe](https://testnet.vibevibe.fun/token/0x125E18275135dD0737EeF03740F989De77ec9e66)  
+**Token address:** `0x125E18275135dD0737EeF03740F989De77ec9e66`  
+**Live app:** [vibelens-d7gi.onrender.com](https://vibelens-d7gi.onrender.com/)  
+**Builder wallet:** `0x4687…bb38`  
+**Launch ID:** `5162`  
+**Category:** `Product & Utility`
 
 ## Security and integrity
 
