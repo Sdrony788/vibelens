@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Explainable launch intelligence for vibe/vibe on Robinhood Chain Testnet." />
+  <meta name="theme-color" content="#090b0a" />
+  <title>VibeLens — Evidence, not hype.</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <div class="noise"></div>
+  <header class="topbar">
+    <a class="brand" href="#top" aria-label="VibeLens home"><span class="mark">VL</span><span>VibeLens</span><small>TESTNET</small></a>
+    <nav><a href="#scanner">Scanner</a><a href="#method">Method</a><a href="#builders">Builders</a></nav>
+    <div class="live"><i></i><span>Robinhood Chain</span><b>46630</b></div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow">OPEN LAUNCH INTELLIGENCE / V1.0</div>
+        <h1>Evidence,<br><em>not hype.</em></h1>
+        <p>VibeLens turns live vibe/vibe testnet signals into an explainable launch health report—so users can find real builders and inspect risk before interacting.</p>
+        <div class="hero-actions"><a class="primary" href="#scanner">Open live scanner <span>↘</span></a><button id="randomBtn" class="secondary">Analyze a launch</button></div>
+        <p class="disclaimer">Testnet research tool. Scores are heuristics, not financial advice.</p>
+      </div>
+      <div class="radar-card">
+        <div class="radar-head"><span>NETWORK PULSE</span><span id="pulseTime">SYNCING</span></div>
+        <div class="orb"><div class="ring r1"></div><div class="ring r2"></div><div class="ring r3"></div><div class="core"><strong id="healthScore">--</strong><span>LIVE SIGNAL</span></div></div>
+        <div class="pulse-grid"><div><span>Launches scanned</span><b id="scanCount">—</b></div><div><span>Builders indexed</span><b id="builderCount">—</b></div><div><span>Source</span><b>ONCHAIN + API</b></div></div>
+      </div>
+    </section>
+
+    <section class="ticker" aria-label="Live system status"><div><span>01</span> NO BLACK-BOX SCORE</div><div><span>02</span> EVERY SIGNAL EXPLAINED</div><div><span>03</span> BUILDER-FIRST DISCOVERY</div><div><span>04</span> ZERO WALLET PERMISSIONS</div></section>
+
+    <section id="scanner" class="scanner section">
+      <div class="section-head"><div><span class="kicker">LIVE SCANNER</span><h2>Launch field</h2></div><div class="filters" role="tablist"><button data-tab="TRENDING" class="active">Trending</button><button data-tab="FINAL_STRETCH">Final stretch</button><button data-tab="GRADUATED">Graduated</button><button data-tab="MOVERS">Movers</button></div></div>
+      <div class="searchrow"><label><span>FILTER</span><input id="search" placeholder="Search name, symbol or 0x address…" autocomplete="off" /></label><span id="sourceState" class="source-state">Connecting to source…</span></div>
+      <div id="launchGrid" class="launch-grid" aria-live="polite"><div class="loading"><i></i>Reading public launch data…</div></div>
+    </section>
+
+    <section id="method" class="method section">
+      <div class="section-head"><div><span class="kicker">THE DIFFERENCE</span><h2>A score you can challenge.</h2></div><p>VibeLens does not predict price. It exposes the evidence behind every rating and clearly labels missing data.</p></div>
+      <div class="method-grid">
+        <article><span class="weight">30%</span><div class="icon">⌁</div><h3>Product proof</h3><p>Description quality, working links, public artifacts and category context.</p></article>
+        <article><span class="weight">25%</span><div class="icon">◫</div><h3>Market health</h3><p>Participation, buy/sell balance, curve progress and lifecycle—not raw hype.</p></article>
+        <article><span class="weight">20%</span><div class="icon">◎</div><h3>Community quality</h3><p>Holder breadth and organic-looking activity with concentration warnings.</p></article>
+        <article><span class="weight">15%</span><div class="icon">◇</div><h3>Creator context</h3><p>Builder identity and visible ecosystem history where public data supports it.</p></article>
+        <article><span class="weight">10%</span><div class="icon">≋</div><h3>Data confidence</h3><p>Freshness and completeness are part of the score, never hidden.</p></article>
+      </div>
+    </section>
+
+    <section id="builders" class="builders section">
+      <div class="section-head"><div><span class="kicker">CREATOR CONTEXT</span><h2>Builder signal</h2></div><p>Public builder rankings are shown as context—not an endorsement.</p></div>
+      <div id="builderTable" class="builder-table"><div class="loading"><i></i>Indexing builders…</div></div>
+    </section>
+  </main>
+
+  <dialog id="reportDialog">
+    <button class="close" aria-label="Close report">×</button>
+    <div id="report"></div>
+  </dialog>
+
+  <footer><div class="brand"><span class="mark">VL</span><span>VibeLens</span></div><p>Built for the vibe/vibe builder ecosystem.</p><div><a href="https://testnet.vibevibe.fun" target="_blank" rel="noreferrer">vibe/vibe ↗</a><a href="#method">Scoring method</a></div></footer>
+  <script src="/app.js" defer></script>
+</body>
+</html>
